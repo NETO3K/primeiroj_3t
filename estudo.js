@@ -29,15 +29,30 @@ function minhaTabuada(){
    }
 }
 
-function quadrado(){
-   for(var i = 2; i < 21; i++){
+func  fotion quadrado(){
+ r(var i = 2; i < 21; i++){
       document.write("O quadrado de " + i + " é " + (i*i) + "<br>");
    }
 }
 
 function total(){
    let val = document.getElementById("valor").value;
-   let ju = document.getElementById("valor").value;
-   let resultado = (val * (1+ (ju/100)));
-  document.write("o resultado  é" + resultado);
+   let ju = document.getElementById("juros").value;
+  
+   document.write("o resultado  é" + resultado);
+if(Number(val))
+ alert ('o valor dos juros deve ser um numero.');
+ document.getElementById.value = '';
+ document.getElementById.focus ()= "";
+ return 
+ {
+   document.write("o resultado  é" + resultado);
+   if(Number(val))
+    alert ('o valor dos juros deve ser um numero.');
+    document.getElementById.value = '';
+    document.getElementById.focus ()= "";
+    return       
+}
+ let resultado = (val * (ju/100)));
+ document.write('o resultado é ' + resultado);
 }
