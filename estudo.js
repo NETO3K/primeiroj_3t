@@ -29,30 +29,47 @@ function minhaTabuada(){
    }
 }
 
-func  fotion quadrado(){
- r(var i = 2; i < 21; i++){
+function quadrado(){
+   for(var i = 2; i < 21; i++){
       document.write("O quadrado de " + i + " é " + (i*i) + "<br>");
    }
+}
+
+function moeda(atual){
+   return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
 
 function total(){
    let val = document.getElementById("valor").value;
    let ju = document.getElementById("juros").value;
-  
-   document.write("o resultado  é" + resultado);
-if(Number(val))
- alert ('o valor dos juros deve ser um numero.');
- document.getElementById.value = '';
- document.getElementById.focus ()= "";
- return 
- {
-   document.write("o resultado  é" + resultado);
-   if(Number(val))
-    alert ('o valor dos juros deve ser um numero.');
-    document.getElementById.value = '';
-    document.getElementById.focus ()= "";
-    return       
-}
- let resultado = (val * (ju/100)));
- document.write('o resultado é ' + resultado);
+   let t = document.getElementById("meses").value;
+
+   if(!Number(val)){
+      alert("O valor deve ser um número.");
+      document.getElementById("valor").value = "";
+      document.getElementById("valor").focus();
+      return 
+   }
+   if(!Number(ju)){
+      alert("O valor dos juros deve ser um número.");
+      document.getElementById("juros").value = "";
+      document.getElementById("juros").focus();
+      return 
+   }
+   if(!Number(t)){
+      alert("A quantidade de meses deve ser um número.");
+      document.getElementById("meses").value = "";
+      document.getElementById("meses").focus();
+      return 
+   }
+   let r = val;
+   for(let m = 1; m <= t; m++){
+      r = (val * (1+ (ju/100)));
+      val = r;
+      texto += m + ": " + moeda(r) + "<br>"
+      //document.write("Mês " + m + " valor: " + moeda(r) + "<br>");
+   }
+   document.getElementById("listaMes").innerHTML = texto
+   document.getElementById("total").innerHTML = "Total: "+moeda(r);
+   //document.write("O tatal é " + moeda(r));
 }
