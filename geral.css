@@ -6,6 +6,15 @@
     box-shadow: 10px 10px rgb(0, 0, 0);
     text-align: center;
 }
+.calcF {
+    display: none;
+}
+#calcFin {
+    display: none;
+}
+#calcFin:checked + .calculadora .calcF{
+    display: block;
+}
 .calculadora input{
 border-radius: 10px;
 border: none;
