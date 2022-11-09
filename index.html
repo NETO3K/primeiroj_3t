@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,28 @@
     <link rel="stylesheet" href="geral.css">
     <script src="estudo.js"></script>
 </head>
+
 <body>
-Valor: <input id="Valor"> <br>
-juros: <input id="juros"> <br>
- <button onclick="total()"> ok </button>
+    <div class="calculadora">
+    <div class="spTotal">
+        <span id="total">Total: 0,00</span> <br>
+    </div>
+        Capital: <input id="valor" type="text"> <br>
+        Juros (mensais): <input id="juros" type="text"> <br>
+        Nr. Meses: <input id="meses" type="text"> <br>
+        <button id="btnCalc" onclick="total()"> Calcular </button>
+        <div class="spListaMes">
+            <span id="listaMes">Meses</span>
+        </div>
+    </div>
+
+    <br><br><br>
 </body>
+
 </html>
+
+
+
 
 
 
